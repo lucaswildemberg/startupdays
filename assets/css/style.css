@@ -3150,7 +3150,7 @@ p {
     top: 115%;
     left: 0;
     width: 100%;
-    background-color: #f4f6f7;
+    background-color: #3148e1;
     z-index: 8;
     padding: 10px 0;
     -webkit-box-shadow: 0px 10px 25px 0px rgba(18, 18, 18, 0.05);
@@ -3165,8 +3165,8 @@ p {
 }
 
 .navbar-area .navbar .navbar-nav .nav-item a {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 4px;
   font-weight: 700;
   padding: 26px 0;
   color: #fff;
@@ -3192,21 +3192,22 @@ p {
   .navbar-area .navbar .navbar-nav .nav-item a {
     padding: 10px 0;
     display: block;
-    color: #121212;
+    color: #ffff;
+    line-height: 2;
   }
 }
 
 .navbar-area .navbar .navbar-nav .nav-item a::before {
   position: absolute;
   content: '';
-  width: 32px;
-  height: 4px;
+  width: 50px;
+  height: 2px;
   background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.1) 0%, white 100%);
   background: -o-linear-gradient(left, rgba(255, 255, 255, 0.1) 0%, white 100%);
   background: linear-gradient(to right, rgba(255, 255, 255, 0.1) 0%, white 100%);
   left: 50%;
   margin: 0 2px;
-  bottom: 14px;
+  bottom: -14px;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
@@ -3217,6 +3218,7 @@ p {
   -ms-transform: translate(-50%) scaleX(0);
   -o-transform: translate(-50%) scaleX(0);
   transform: translate(-50%) scaleX(0);
+  background: transparent;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -3244,7 +3246,7 @@ p {
 
 @media (max-width: 767px) {
   .navbar-area .navbar .navbar-nav .nav-item.active>a, .navbar-area .navbar .navbar-nav .nav-item:hover>a {
-    color: #121212;
+    color: #fff;
   }
 }
 
@@ -3318,22 +3320,23 @@ p {
   -webkit-box-shadow: 0px 10px 25px 0px rgba(18, 18, 18, 0.05);
   -moz-box-shadow: 0px 10px 25px 0px rgba(18, 18, 18, 0.05);
   box-shadow: 0px 10px 25px 0px rgba(18, 18, 18, 0.05);
+  background: rgba(5, 9, 57, 0.5);
+  mix-blend-mode: normal;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .navbar-area.sticky .navbar .navbar-toggler .toggler-icon {
-  background-color: #121212;
+  background-color: #fff;
 }
 
 .navbar-area.sticky .navbar .navbar-nav .nav-item a {
-  color: #121212;
   opacity: 0.7;
 }
-
-.navbar-area.sticky .navbar .navbar-nav .nav-item a::before {
-  background: -webkit-linear-gradient(left, rgba(18, 18, 18, 0) 0%, #121212 100%);
-  background: -o-linear-gradient(left, rgba(18, 18, 18, 0) 0%, #121212 100%);
-  background: linear-gradient(to right, rgba(18, 18, 18, 0) 0%, #121212 100%);
+.navbar-area.sticky .navbar .navbar-nav .nav-item.active a {
+  opacity: 1;
 }
+
 
 .navbar-area.sticky .navbar .navbar-nav .nav-item.active, .navbar-area.sticky .navbar .navbar-nav .nav-item:hover {
   color: #121212;
@@ -5023,16 +5026,18 @@ footer .area-primaria .texto-local .end-contato .item .text p {
 
 footer .area-primaria .box h2 {
   color: #363f5a;
-  font: normal 700 32px/47px 'Poppins';
   margin-bottom: 5px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1;
 }
 
 footer .area-primaria .box p {
   max-width: 360px;
   color: #656a80;
-  font: normal 400 16px/26px 'Poppins';
   text-align: center;
-  margin-bottom: 23px;
+  margin-bottom: 10px;
+  padding: 15px;
 }
 
 footer .area-primaria .box .btn {
@@ -5250,7 +5255,7 @@ footer .area-secundaria nav .item ul li a {
 }
 
 .header-area .title {
-  font-size: 50px;
+  font-size: 44px;
   line-height: 1.2 !important;
   color: #fff;
   font-weight: 700;
@@ -5730,4 +5735,65 @@ a.tip {
     height: 500px;
     position: relative;
     bottom: 0;
+}
+.box-numeros {
+	 text-align: center;
+	 margin: 5px;
+	 padding: 15px;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 flex-direction: column;
+	 height: 80px;
+}
+ .box-numeros h2 {
+	 margin: 0;
+	 color: #fff;
+	 font-size: 38px;
+}
+ .box-numeros p {
+	 margin: 0;
+	 font-size: 16px;
+	 color: #9a9a9a;
+}
+ .box-numeros-area {
+	 display: flex;
+	 flex-wrap: wrap;
+	 justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .box-numeros {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .single-features .features-content .text {
+    text-align: left;
+  }
+  .single-features .features-content .features-title {
+        text-align: left;
+  }
+}
+
+.navbar-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 0;
+    z-index: 99;
+}
+.navbar-area .navbar .navbar-nav .nav-item a {
+    padding: 0;
+}
+.flag-item {
+  top: 5px;
+}
+
+.counter {
+  color: #fff;
+  font-size: 38px;
+  font-weight: 600;
 }
